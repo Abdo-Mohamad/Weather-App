@@ -15,6 +15,9 @@ let weather = {
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
+    // To get a different photos for each country you search
+    document.body.style.backgroundImage =
+      "url('https://source.unsplash.com/1600x900/?" + name + "')";
     //console.log(name, icon, description, temp, humidity, speed);
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(
