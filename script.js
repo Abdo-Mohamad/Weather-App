@@ -26,6 +26,7 @@ let weather = {
       "Humidity " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind speed: " + speed + "Km/h";
   },
+  // This is for the search button
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
   },
