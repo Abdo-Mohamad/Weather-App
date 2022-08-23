@@ -27,3 +27,5 @@ let weather = {
     document.querySelector(".wind").innerText = "Wind speed: " + speed + "Km/h";
   },
 };
+
+// This is for the button 
