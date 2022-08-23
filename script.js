@@ -25,6 +25,8 @@ let weather = {
     document.querySelector(".humidity").innerText =
       "Humidity " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind speed: " + speed + "Km/h";
+    // This a when you reload the page
+    document.querySelector(".weather").classList.remove("loading");
   },
   // This is for the search button
   search: function () {
@@ -44,3 +46,6 @@ document
       weather.search();
     }
   });
+
+// This a when you reload the page
+weather.fetchWeather("Barcelona");
