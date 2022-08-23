@@ -9,7 +9,7 @@ let weather = {
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
   },
-  // Display all the element into the  page 
+  // Display all the element into the  page
   displayWeather: (data) => {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -26,6 +26,12 @@ let weather = {
       "Humidity " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind speed: " + speed + "Km/h";
   },
+  search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+  },
 };
 
-// This is for the button 
+// This is for the search button
+document.querySelector(".search button").addEventListener("click", function () {
+  weather.search();
+});
