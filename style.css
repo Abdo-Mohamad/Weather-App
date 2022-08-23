@@ -9,6 +9,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #222;
   background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: 100% 100%;
   font-size: 120%;
 }
 
@@ -80,7 +81,7 @@ h1.temp {
 
 .weather.loading:after {
   visibility: visible;
-  content:"Loading......";
+  content: "Loading......";
   color: wheat;
   position: absolute;
   top: 0;
