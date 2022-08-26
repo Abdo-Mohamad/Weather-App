@@ -34,6 +34,7 @@ let weather = {
   // This is for the search button
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
+    this.fetchWeather((document.querySelector(".search-bar").value = ""));
   },
 };
 // Getting the user's location with OpenCage Geocoding API in javascript
