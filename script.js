@@ -91,11 +91,17 @@ let geocode = {
     function success(data) {
       geocode.reverseGeocode(data.coords.latitude, data.coords.longitude);
     }
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, console.error);
-    } else {
-      // This a when you reload the page
-      weather.fetchWeather("Barcelona");
+
+    navigator.geolocation.getCurrentPosition(success, error);
+
+    function error(err) {
+      //console.warn(`ERROR(${err.code}): ${err.message}`);
+      if (err.code == 1) {
+        // This a when you reload the page
+        weather.fetchWeather("Barcelona");
+      } else {
+        weather.fetchWeather("Barcelona");
+      }
     }
   },
 };
